@@ -147,7 +147,7 @@ if (filter_input(INPUT_GET, "cadastrar", FILTER_SANITIZE_STRING)) {
             <option <?= ($ordem == "data_mod") ? "selected" : "" ?> value="data_mod">Data da última modificação</option>
         </select>
         <input type="text" id="txtBusca" name="txtBusca" value="<?= $termo ?>"  placeholder="Digite sua busca(opcional)."/>
-        <button class="btn btn-success" id="btnBusca" name="btnBusca">Buscar</button>  
+        <button class="btn btn-success" id="btnBuscaAdm" name="btnBusca">Buscar</button>  
 
     </div>
 
@@ -252,7 +252,7 @@ if ($listaPaginacao != null) {
         }
     }
 
-    $("#btnBusca").click(function () {
+    $("#btnBuscaAdm").click(function () {
 
         var tipo = $("#slTipo").val();
 

@@ -5,29 +5,10 @@
      
 <div class="panel panel-body">
     
-       <div id="myCarousel" class="carousel slide" data-ride="carousel">
- 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-        <img src="img/slider1.jpg" alt="" class="imgSobreNos"/>
-    </div>
-
-    <div class="item">
-        <img src="img/slider4.jpg" alt="" class="imgSobreNos"/>
-    </div>
-      
-    <div class="item">
-      <img src="img/slider2.jpg" alt="" class="imgSobreNos"/>
-    </div>
-      
-     <div class="item">
-      <img src="img/slider3.jpg" alt="" class="imgSobreNos"/>
-    </div>
+     
+  <div class="dvSlider">
+    
   </div>
-
- 
-</div>
     
         <p class="txtSobreNos"> 
             A Lanchonete foi fundada em 2013 por um grupo de empreendendores apaixonados pelo ramo alimentício

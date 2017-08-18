@@ -49,7 +49,7 @@ if (filter_input(INPUT_POST, "btnEditar", FILTER_SANITIZE_STRING)) {
     $adm->setNome($nome);
 
     if ($admController->editarAdm($adm, $atualizaImg)) {
-
+	   $_SESSION['nome'] = $nome;
         $res = "<div role=\"alert\" class=\"alert alert-success\">Perfil editado com sucesso.</div>";
     } else {
         $res = "<div role=\"alert\" class=\"alert alert-danger\">Erro ao tentar editar perfil.</div>";

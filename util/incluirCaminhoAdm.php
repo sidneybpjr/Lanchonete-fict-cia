@@ -4,7 +4,7 @@ $pagina = filter_input(INPUT_GET, "pagina", FILTER_SANITIZE_STRING);
 
 $paginas = array(
     "destaques" => "../admin/view/DestaqueAdm.php",
-    "logout" => "../admin/view/Logout.php",
+    "logout" => "../admin/Logout.php",
     "perfil" => "../admin/view/PerfilAdm.php",
     "produtos" => "../admin/view/ProdutoAdm.php",
     "homeAdm" => "../admin/view/homeAdm.php",

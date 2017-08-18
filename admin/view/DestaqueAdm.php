@@ -2,38 +2,29 @@
 require_once "../controller/DestaqueController.php";
 require_once "../model/Destaque.php";
 require_once "../util/Modif_Datas_e_Precos.php";
-
 $modifDatas = new Modif_Datas_e_Precos();
 $destaqueController = new DestaqueController();
 $mensagem = " ";
-
 //botao cadastro
 if (filter_input(INPUT_POST, "btnCadastrar", FILTER_SANITIZE_STRING)) {
     require_once ("../util/UploadFile.php");
     $uploadFile = new Upload();
-
     $destaque = new Destaque();
     $imagem = $_FILES['imgDestaque'];
     $dataExpiracao = filter_input(INPUT_POST, "dataExp", FILTER_SANITIZE_STRING);
     $inseridoPor = $_SESSION['cod'];
-
     $imagemFinal = $uploadFile->LoadFile("../img/destaques/", "img", $imagem);
     $dataExpiracao = $modifDatas->CadastrarData($dataExpiracao);
-
     $destaque->setImagem($imagemFinal);
     $destaque->setDataExpiracao($dataExpiracao);
     $destaque->setStatusExibicao(0);
     $destaque->setAdministrador($inseridoPor);
-
     if (!($destaqueController->inserir($destaque))) {
-
-
         $mensagem = "<div class=\"alert alert-danger\" role=\"alert\">Houve um erro ao tentar cadastrar.</div>";
     } else {
         $mensagem = "<div class=\"alert alert-success\" role=\"alert\">Destaque cadastrado com sucesso.</div>";
     }
 }
-
 //botão exibição
 if (filter_input(INPUT_GET, "codexibido", FILTER_SANITIZE_NUMBER_INT)) {
     $codExibido = filter_input(INPUT_GET, "codexibido", FILTER_SANITIZE_NUMBER_INT);
@@ -55,7 +46,6 @@ if (filter_input(INPUT_GET, "codexibido", FILTER_SANITIZE_NUMBER_INT)) {
             }
         }
     }
-
 //Excluir
 if (filter_input(INPUT_GET, "excluir", FILTER_SANITIZE_NUMBER_INT)) {
     $codExcluir = filter_input(INPUT_GET, "excluir", FILTER_SANITIZE_NUMBER_INT);
@@ -119,14 +109,13 @@ if (filter_input(INPUT_GET, "excluir", FILTER_SANITIZE_NUMBER_INT)) {
         
         <!--Mostrar todos-->
         <div class="panel panel-body">
-            <a href="?pagina=destaques&cadastrar=sim" class="btn btn-success btnDestaque">Cadastrar destaque/promoção</a>
+            <a href="?pagina=destaques&cadastrar=sim" class="btn btn-success btnNovoDestaque">Cadastrar destaque/promoção</a>
             <div class="mensagem">
                 <?= $mensagem; ?>
             </div>
             
             <?php
             if ($listaDestaques != null) {
-
                 foreach ($listaDestaques as $dest) {
                     $exibido = ($dest->getStatusExibicao() == 1) ? "Retirar exibição" : "Incluir exibição";
                     ?>
@@ -160,7 +149,5 @@ if (filter_input(INPUT_GET, "excluir", FILTER_SANITIZE_NUMBER_INT)) {
             window.location.href = '?pagina=destaques&excluir=' + id;
         }
     }
-
    
 </script>
-

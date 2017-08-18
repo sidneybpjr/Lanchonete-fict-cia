@@ -6,12 +6,11 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     list-style-type: none;
-
     box-sizing: border-box;
 }
 
 body{
-    background: url('../img/fundo.jpg') top center repeat-y;
+    background: url('../img/fundo.jpg') repeat;
     background-size: 100%;
 }
 
@@ -37,11 +36,9 @@ a:hover{
     width: 100%;
     position: relative;
     background: #2196F3;
-
-    border-bottom: 4px solid #212121;
     padding: 10px;
     border: 1px solid #212121;
-
+   
 }
 
 .redes-sociais{
@@ -115,6 +112,7 @@ a:hover{
 .menu-adm{
     float: left;
     line-height: 35px;
+    margin-left: 8px;
 }
 
 .menu-adm li{
@@ -128,7 +126,6 @@ a:hover{
     cursor: pointer;
     color: #FFFFFF;
     font-size: 1.1em;
-
 
 }
 
@@ -210,7 +207,7 @@ a:hover{
     background-color: #1976D2;
     line-height: 30px;
     border: 1px solid #212121;
-    margin-top: -4px;
+    margin-top: -15px;
 
 }
 
@@ -245,7 +242,7 @@ a:hover{
 
 .img-destaque{
     width: 300px;
-    height: 300px;
+    height: 250px;
     float: left;
     padding: 4px;
     border: 1px solid #212121;
@@ -258,7 +255,7 @@ a:hover{
     padding: 5px;
 }
 
-.btnDestaque{ 
+.btnNovoDestaque{ 
     margin: 25px 0px 10px 0px; 
 }
 
@@ -307,7 +304,7 @@ a:hover{
     width: 270px;
 }
 
-#btnBusca{
+#btnBuscaAdm{
     margin-top: 10px;
 
 }
@@ -354,8 +351,8 @@ a:hover{
 }
 
 
-/* Telefones em landscape e abaixo  */
-@media (max-width: 480px) { 
+/* xs  */
+@media (max-width: 767px) { 
 
     .container{width: 100%;}
     .menu{display:none;}
@@ -363,32 +360,33 @@ a:hover{
     .cabecalho span{display:none;}
     .cabecalho .imgLogoCelular{height: 100px; display:block; margin: -10px auto 0px auto;}
     .img-destaque, #imgAdm{width: 100%; height: 40%;}
-}  
+    #imgProdutoEdicao{width: 100%;}
+    #btnBuscaAdm{display: block;}
+    #slTipo, #slOrdenar{margin-bottom: 9px;}
+    #txtBusca{margin-bottom: 11px;}
+    }
 
-/* Telefone em landscape a tablet em portrait */
-@media (max-width: 767px) { 
-
-    .container{width: 100%;} 
-    .menu{display:none;}
-    .cabecalho span{display:none;}
-
-}
-
-/* tablet em portrait a landscape e desktop */
+/* sm */
 @media (min-width: 768px) and (max-width: 979px) { 
 
     .container{width: 95%;margin: 0 auto;} 
     #spFuncionamento, #spEndereco{display:none;}
     .dvTituloPainelInfo{display:none;} 
+    #btnBuscaAdm{display: block;}
+    #slTipo, #slOrdenar{margin-bottom: 9px;}
+    #txtBusca{margin-bottom: 11px;}
 }
 
 @media (min-width: 980px) and (max-width: 991px) { 
 
     .cabecalho span:not(#spTituloPainel){display:none;}
     .dvTituloPainelInfo{display:none;}
+    #slTipo, #slOrdenar{margin-bottom: 9px;}
+    #txtBusca{margin-bottom: 11px;}
+    #btnBuscaAdm{display: block;}
 }
 
-/* Desktop grande */
+/* md + */
 @media (min-width: 992px) {
 
     .container{

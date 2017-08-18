@@ -11,7 +11,7 @@
 }
 
 body{
-    background: url('../img/fundo.jpg') top center repeat-y;
+    background: url('../img/fundo.jpg') top center repeat;
     background-size: 100%;
 }
 
@@ -40,11 +40,8 @@ a:hover{
     width: 100%;
     position: relative;
     background: #2196F3;
-
-    border-bottom: 4px solid #212121;
     padding: 10px;
     border: 1px solid #212121;
-
 }
 
 .redes-sociais{
@@ -111,12 +108,12 @@ a:hover{
     width: 100%;
     background-color: #1976D2;
     border: 1px solid #212121;
-
 }
 
 .menu-site{
     float: left;
     line-height: 35px;
+    margin-left: 8px;
 }
 
 .menu-site li{
@@ -206,7 +203,7 @@ a:hover{
     background-color: #1976D2;
     line-height: 30px;
     border: 1px solid #212121;
-    margin-top: -8px;
+    margin-top: -15px;
 
 }
 
@@ -241,7 +238,7 @@ a:hover{
 }
 
 #imgFixaHome{
-    width: 100%;
+    width: 75%;
     height: 330px;
     border: 4px solid #212121;
 
@@ -484,8 +481,12 @@ margin: 50px 0;
    font-size: 1.2em; 
 }
 
-#frmSimulacao legend{
-    margin: 30px 0px 30px 0px;
+#frmSimulacao .spanSimulacao{
+    display:block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 30px; 
 }
 
 input[type='radio'][name='pao']:nth-of-type(2){
@@ -505,8 +506,98 @@ input[type='radio'][name='pao']:nth-of-type(2){
     
 }
 
-/* Telefones em landscape e abaixo */
-@media (max-width: 480px) { 
+/*slider*/
+.dvSlider{
+    width: 580px;
+    height: 350px;
+    margin: 0 auto;
+    border: 3px solid #212121;
+    animation: slider 10s infinite linear;
+    -webkit-animation: slider 10s infinite linear;
+    -moz-animation: slider 10s infinite linear;
+}
+
+
+@keyframes slider{
+    0%, 24%{
+       background-image: url(../img/slider1.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    25%, 49%{
+       background-image: url(../img/slider2.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    50%, 74%{
+       background-image: url(../img/slider3.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    75%, 100%{
+       background-image: url(../img/slider4.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+}
+
+@-webkit-keyframes slider{
+    0%, 24%{
+       background-image: url(../img/slider1.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    25%, 49%{
+       background-image: url(../img/slider2.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    50%, 74%{
+       background-image: url(../img/slider3.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    75%, 100%{
+       background-image: url(../img/slider4.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+}
+
+@-moz-keyframes slider{
+    0%, 24%{
+       background-image: url(../img/slider1.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    25%, 49%{
+       background-image: url(../img/slider2.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    50%, 74%{
+       background-image: url(../img/slider3.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    
+    75%, 100%{
+       background-image: url(../img/slider4.jpg); 
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+}
+
+/* xs */
+@media (max-width: 767px) { 
 
     .container{width: 100%;}
     .menu{display:none;}
@@ -514,44 +605,32 @@ input[type='radio'][name='pao']:nth-of-type(2){
     .cabecalho span{display:none;}
     .cabecalho .imgLogoCelular{height: 100px; display:block; margin: -10px auto 0px auto}
     #imgFixaHome, .imgDestHome{height: 100%;}
-    .imgProdutoExib{width: 100%;}
-    
-    .btnPainel{
-        position: absolute;
-        left: 72%;
-        top: 1%;
-    }
-
-    .spGrande{
-        font-size: 1.2em; 
-        font-weight: bold;
-        letter-spacing: 0.06em;
-    }
-
+    .imgProdutoExib, #imgDetalhesProd{width: 100%;}
+    #imgDetalhesProd{margin-top: 20px; height: 70%;}
+    #slTipo{margin-bottom: 9px;}
+    #btnBusca{margin-top: 11px; margin-left: 0; display: block;}
+    .btnPainel{position: absolute; left: 72%; top: 1%;}
+    .spGrande{font-size: 1.2em; font-weight: bold; letter-spacing: 0.06em;}
     .spSub{font-size: 1em; }
     .carousel-inner{display: none;}
-
+    #imgFixaHome{width: 100%; height: 300px;}
 }
-/* Telefone em landscape a tablet em portrait */
-@media (max-width: 767px) { 
 
-    .container{width: 100%;} 
-    .menu{display:none;}
-    .cabecalho span{display:none;}
-    .carousel-inner{display: none;}
-
-}
-/* tablet em portrait a landscape e desktop */
+/* sm */
 @media (min-width: 768px) and (max-width: 979px) { 
     .container{width: 95%;margin: 0 auto;} 
     #spFuncionamento, #spEndereco{display:none;}
+    #slTipo{margin-bottom: 9px;}
+    #btnBusca{margin-top: 11px; margin-left: 0; display: block;}
 }
 
 @media (min-width: 980px) and (max-width: 991px) { 
     .cabecalho span{display:none;}
+    #slTipo{margin-bottom: 9px;}
+    #btnBusca{margin-top: 11px; margin-left: 0; display: block;}
 }
 
-/* Desktop grande */
+/* md + */
 @media (min-width: 992px) {
     .container{
         width: 960px;

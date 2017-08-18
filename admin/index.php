@@ -19,6 +19,7 @@
         <script src="../js/jquery.maskMoney.min.js" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/png" href="img/hamburguer005.gif"/>
 
     </head>
     <body>
@@ -28,13 +29,13 @@
             <!-- cabeçalho -->
             <div class="cabecalho">
                 <ul class="redes-sociais hidden-xs">
-                    <li><a href="http://www.facebook.com"><img class="redes-celular-img" src="img/facebook.png" alt="facebook"/></a></li>
-                    <li><a href="http://www.twitter.com"><img class="redes-celular-img" src="img/twitter.png" alt="twitter"/></a></li>
-                    <li><a href="http://www.instagram.com"><img class="redes-celular-img" src="img/instagram.png" alt="instagram"/></a></li>
+                    <li><a href="http://www.facebook.com"><img src="img/facebook.png" alt="facebook"/></a></li>
+                    <li><a href="http://www.twitter.com"><img src="img/twitter.png" alt="twitter"/></a></li>
+                    <li><a href="http://www.instagram.com"><img src="img/instagram.png" alt="instagram"/></a></li>
                 </ul>
                 <img src="img/logo.png" alt="" class="imgLogo hidden-xs"/>
                 <img src="img/logocelular.png" alt="" class="imgLogoCelular visible-xs"/> 
-                
+
                 <span id="spEndereco">
                     Rua Vaz Lobo, 50, Centro - Rio de Janeiro
                 </span>
@@ -50,13 +51,13 @@
 
             </div>
             <?php
-             session_start();
+            session_start();
             if (!isset($_SESSION['cod'])) {
-                
+
                 echo '<div class="alert alert-danger" role="alert">Você não tem permissão para mexer no painel.</div>';
                 echo '<a href="../index.php?pagina=home">Clique aqui para entrar no nosso site</a>';
-            exit;
-          }
+                exit;
+            }
             ?>
             <!-- menu -->
             <div class="menu">
@@ -72,18 +73,18 @@
 
             <!-- menu celular-->
             <div class="clearfix"></div>
-            <button class="btn btn-info btnMenuCelular visible-xs"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+            
+                <button class="btn btn-info btnMenuCelular visible-xs"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
 
-            <ul class="menu-adm-celular hidden-lg hidden-md">
-                <li><a href="?pagina=home">Home</a></li>
-                <li><a href="?pagina=produtos">Produtos</a></li>
-                <li><a href="?pagina=destaques">Destaques e promoções</a></li>
-                <li><a href="?pagina=cadastrarAdm">Cadastrar administrador</a></li>
-                <li><a href="?pagina=perfil">Perfil</a></li>
-                <li><a href="?pagina=logout">Sair</a></li>
-            </ul>
-
-
+                <ul class="menu-adm-celular hidden-lg hidden-md">
+                    <li><a href="?pagina=home">Home</a></li>
+                    <li><a href="?pagina=produtos">Produtos</a></li>
+                    <li><a href="?pagina=destaques">Destaques e promoções</a></li>
+                    <li><a href="?pagina=cadastrarAdm">Cadastrar administrador</a></li>
+                    <li><a href="?pagina=perfil">Perfil</a></li>
+                    <li><a href="?pagina=logout">Sair</a></li>
+                </ul>
+            
             <!-- div celular-->
             <div class="clearfix"></div>
             <div class="dvInfo hidden-lg hidden-md">
@@ -94,28 +95,25 @@
                     </span>
                 </div>
 
-
                 <span>
                     Rua Vaz Lobo, 50, Centro - Rio de Janeiro
                 </span><br />
-
 
                 <span>
                     Funcionamos de Seg a Sáb das 10:00 às 22:00hs.
                 </span>
 
             </div>
+        
+        <!--  inclusão de página -->
 
-            <!--  inclusão de página -->
-            <div class="pagina">
-                <?php
-                require_once "../util/incluirCaminhoAdm.php";
-                ?>
-            </div>
+        <?php
+        require_once "../util/incluirCaminhoAdm.php";
+        ?>
 
-            <!-- rodapé -->
+        <!-- rodapé -->
+       
             <div class="rodape">Lanchonete &copy; - Todos os direitos reservados</div>
-
 
             <!-- redes sociais celular -->
             <ul class="redes-sociais-celular visible-xs">
@@ -123,6 +121,6 @@
                 <li><a href="http://www.twitter.com"><img src="img/twitter.png" alt="twitter"/></a></li>
                 <li><a href="http://www.instagram.com"><img src="img/instagram.png" alt="instagram"/></a></li>
             </ul>
-        </div>
-    </body>
+    </div>
+</body>
 </html>

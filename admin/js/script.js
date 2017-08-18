@@ -1,3 +1,5 @@
+//adm
+
 $(document).ready(function(){
 
 $.datepicker.setDefaults( $.datepicker.regional[ "pt-BR" ] );
@@ -15,5 +17,6 @@ $("#txtPreco").maskMoney({symbol:"R$",decimal:",",thousands:"."});
 
 $("#txtPrecoCad").maskMoney({symbol:"R$",decimal:",",thousands:"."});
 
-});
+$(".alert").delay(2000).fadeOut("slow");
 
+});

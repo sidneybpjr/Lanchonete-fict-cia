@@ -18,14 +18,12 @@ $bebidas = $produtoController->pegarTipo(3);
     <div class="panel panel-body dvSimulacao">
         <span id="obsSimulacao">Obs.: Esta simulação não leva em conta as promoções. Confira-as na home de nosso site.</span>
         <form id="frmSimulacao">
-            <fieldset>
-                <legend id="legendPao">Pão</legend> 
+            
+                <span class="spanSimulacao">Pão</span> 
                 <input type="radio" name="pao" value="4.00" checked="checked"/>15 cm. - R$ 4,00
                 <input type="radio" name="pao" value="8.00"/>30 cm. - R$ 8,00  
-            </fieldset>
-
-            <fieldset>
-                <legend>Sanduíche</legend>
+            
+                <span class="spanSimulacao">Sanduíche</span>
                 <select name="slSanduiches">
                     <?php
                     foreach ($sanduiches as $sanduiche) {
@@ -35,10 +33,8 @@ $bebidas = $produtoController->pegarTipo(3);
 
                     <?php } ?>
                 </select>
-            </fieldset>
-
-            <fieldset>
-                <legend>Ingredientes</legend>
+            
+                <span class="spanSimulacao">Ingredientes</span>
                 <div class="row">
      <div class="col-lg-6">
                 <?php
@@ -62,19 +58,15 @@ $bebidas = $produtoController->pegarTipo(3);
          
      </div>
                 </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Acompanhamentos</legend>
+            
+            <span class="spanSimulacao">Acompanhamentos</span>
                 <?php
                 foreach ($acompanhamentos as $acompanhamento) {
                     ?>
                     <input type="checkbox" name="chAcompanhamento[]" value="<?= $acompanhamento->getPreco(); ?>"><?= $acompanhamento->getNome(); ?><br />
                 <?php } ?>
-            </fieldset>
-
-            <fieldset>
-                <legend>Bebida</legend>
+            
+                <span class="spanSimulacao">Bebida</span>
                 <select name="slBebidas">
                     <option value="0.00">Selecione a bebida</option>
                     <?php
@@ -83,7 +75,7 @@ $bebidas = $produtoController->pegarTipo(3);
                         <option value="<?= $bebida->getPreco(); ?>"><?= $bebida->getNome(); ?></option>
                     <?php } ?>
                 </select>
-            </fieldset>
+            
         </form>
         <span class="spPrecoTotal">
             Total: R$ 0,00 

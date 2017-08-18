@@ -15,12 +15,12 @@ class DestaqueController {
         $this->destaqueDAO = new DestaqueDAO();
     }
 
-    function pegarTodos() {
+    public function pegarTodos() {
       return $this->destaqueDAO->pegarTodos();
         
     }
     
-    function pegarImagem($cod) {
+    public function pegarImagem($cod) {
      if ($cod > 0) {
            return $this->destaqueDAO->pegarImagem($cod);
             
@@ -30,7 +30,7 @@ class DestaqueController {
         
     }
 
-    function excluir($cod) {
+    public function excluir($cod) {
         
         if ($cod > 0) {
            return $this->destaqueDAO->excluir($cod);
@@ -40,7 +40,7 @@ class DestaqueController {
         }
     }
 
-    function inserir($destaque) {
+    public function inserir($destaque) {
         if ($destaque != null) {
             return $this->destaqueDAO->inserir($destaque);
         } else {
@@ -49,7 +49,7 @@ class DestaqueController {
     }
     
     
-    function retirarExibicao($cod){
+    public function retirarExibicao($cod){
         if ($cod > 0) {
            return $this->destaqueDAO->retirarExibicao($cod);
             
@@ -58,7 +58,7 @@ class DestaqueController {
         }
     }
     
-    function incluirExibicao($cod){
+    public function incluirExibicao($cod){
         if ($cod > 0) {
            return $this->destaqueDAO->incluirExibicao($cod);
             
