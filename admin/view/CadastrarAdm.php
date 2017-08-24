@@ -56,13 +56,13 @@ if (filter_input(INPUT_POST, "btnCadAdm", FILTER_SANITIZE_STRING)) {
         <form name="frmAdmNovo" class="frmCadAdm" method="post" enctype="multipart/form-data">
 
             <label for="txtNome">Nome:</label>
-            <input type="text" class="form-group validar" name="txtNome" id="txtNome" minlength="3" required="required" title="Preencha o campo, e com pelo menos 3 caracteres"/><br />
+            <input type="text" class="form-group" name="txtNome" id="txtNome" minlength="3" required="required" title="Preencha o campo, e com pelo menos 3 caracteres"/><br />
 
             <label for="txtEmail">Email:</label>
             <input type="email" class="form-group" name="txtEmail" id="txtEmail" required="required" title="Forneça um endereço de email válido"/><br />
 
             <label for="txtSenha">Senha:</label>
-            <input type="password" class="form-group validar" name="txtSenha" id="txtSenha" minlength="6" required="required" title="Preencha o campo, e com pelo menos 6 caracteres"/><br />
+            <input type="password" class="form-group" name="txtSenha" id="txtSenha" minlength="6" required="required" title="Preencha o campo, e com pelo menos 6 caracteres"/><br />
 
             <label for="foto">Foto:</label>
             <input type="file" class="form-group" name="foto" id="foto" accept="img/*" required="required" title="Selecione uma foto"/><br />

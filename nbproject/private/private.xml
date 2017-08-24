@@ -5,15 +5,14 @@
             <url>css/style.css</url>
             <bookmark id="1">
                 <name/>
-                <line>494</line>
+                <line>459</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/lanchonete/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/lanchonete/view/SobreNosView.php</file>
+            <file>file:/C:/xampp/htdocs/lanchonete/admin/view/ProdutoAdm.php</file>
         </group>
     </open-files>
 </project-private>

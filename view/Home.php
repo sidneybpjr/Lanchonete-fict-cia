@@ -24,7 +24,7 @@ $destaques = $destaqueController ->pegarTodos();
     foreach($destaques as $dest){
         if($dest->getStatusExibicao() == 1){
         ?>
-        <div class="dvDestaque col-lg-6">
+        <div class="dvDestaque col-lg-6 col-md-6">
              <img src="img/destaques/<?= $dest->getImagem(); ?>" class="imgDestHome" alt=""/>
         </div>
     <?php

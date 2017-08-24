@@ -115,15 +115,16 @@ if (isset($_SESSION['cod'])) {
 
             <!-- rodapé -->
 
-            <div class="rodape">Lanchonete &copy; - Todos os direitos reservados</div>
+            <div class="rodape">
+                <span id="spRodape">Lanchonete &copy; - Todos os direitos reservados</span>
 
-            <!-- redes sociais celular -->
-            <ul class="redes-sociais-celular visible-xs">
-                <li><a href="http://www.facebook.com"><img src="img/facebook.png" alt="facebook"/></a></li>
-                <li><a href="http://www.twitter.com"><img src="img/twitter.png" alt="twitter"/></a></li>
-                <li><a href="http://www.instagram.com"><img src="img/instagram.png" alt="instagram"/></a></li>
-            </ul>
-
+                <!-- redes sociais celular -->
+                <ul class="redes-sociais-celular visible-xs">
+                    <li><a href="http://www.facebook.com"><img src="img/facebook.png" alt="facebook"/></a></li>
+                    <li><a href="http://www.twitter.com"><img src="img/twitter.png" alt="twitter"/></a></li>
+                    <li><a href="http://www.instagram.com"><img src="img/instagram.png" alt="instagram"/></a></li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>

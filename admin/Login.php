@@ -51,7 +51,7 @@ if (filter_input(INPUT_POST, "btnLogin", FILTER_SANITIZE_STRING)) {
             <label for="txtSenhaLogin">Senha:</label>
             <input type="password" name="txtSenha" id="txtSenhaLogin"/> 
             
-            <input type="submit" class="btnSubmit" name="btnLogin"/>
+            <input type="submit" class="btnSubmit" name="btnLogin" value="Entrar"/>
         </form>
         
         <a href="index.php" class="voltarLogin">Voltar</a>

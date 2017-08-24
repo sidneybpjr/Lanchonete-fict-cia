@@ -68,10 +68,10 @@ if ($qtdTotalProdutos == 0) {
             ?>
 
             <div class="row dvExib">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
                    <img src="img/produtos/<?= $prod->getImagem(); ?>" class="imgProdutoExib" alt="" />
                 </div>
-                <div class="col-lg-6 dvExibSpan">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5 dvExibSpan">
                     <a href="?pagina=detalhesprod&cod=<?= $prod->getCod(); ?>&pag=<?= $pag ?>&tipo=<?= $tipo ?>&termo=<?= $termo ?>" class="linkDetalhesProd"><?= $prod->getNome(); ?><br /><?= $precoExib; ?></a>
               </div>
             </div>
